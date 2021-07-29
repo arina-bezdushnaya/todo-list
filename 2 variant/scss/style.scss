@@ -1,0 +1,49 @@
+@import "variables.scss";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background: linear-gradient(120deg, $color_1, $color_2);
+  min-height: 100vh;
+}
+
+h3 {
+  margin: 10px 0;
+}
+
+i {
+  float: right;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.todolist {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 10px;
+  &_add {
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid $color_4;
+    background: none;
+    padding: 10px;
+    outline: none;
+    font-size: 18px;
+  }
+  .task {
+    width: 100%;
+    background: $color_3;
+    padding: 18px;
+    margin: 6px 0;
+    overflow: hidden;
+  }
+  &_completed .task {
+    background: $color_5;
+    color: $color_6;
+  }
+}

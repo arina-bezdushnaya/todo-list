@@ -1,0 +1,60 @@
+@import 'variables.scss';
+
+
+* {
+  box-sizing: border-box;
+}
+  
+body {
+  margin: 0;
+  padding: 0;
+  background: $color_7;
+}
+
+html {
+  font-family: 'Roboto', sans-serif;
+}
+
+h3 {
+  margin: 0;
+  padding: 0 10px;
+  font-size: 1em;
+  line-height: 2.5em;
+  color: $color_2;
+  background:  linear-gradient(to bottom, $color_5, $color_6);
+}
+
+.container {
+  border: 2px solid $color_1;
+  border-radius: 5px;
+  width: 300px;
+  margin: 0 auto;
+  .check__input {
+    display: none;
+    position: absolute;
+      &:checked + .check__label { 
+      color: $color_3;
+      text-decoration: line-through;
+      & .icon-circle-regular:before{ 
+        content: "\e901";
+      }
+    }
+  }
+  .check__label {
+    display: block;
+    padding: 1em 0.5em 1em 3em;
+    background-color: $color_4;
+    font-size: 1.2em;
+    color: $color_1;
+    font-weight: 500;
+    position: relative;
+    border-bottom: 2px solid $color_1;
+     .icon-circle-regular:before {
+      content: "\e900";
+      position: absolute;
+      top: 0.25em;
+      left: 0.25em;
+      font-size: 2em;
+    }
+  }
+}
